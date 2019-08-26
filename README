@@ -1,0 +1,12 @@
+WHAT THIS IS:
+This solution identifes the ten most frequent browsers in the SQL attached SQL database and adds their user id's and the number of visits to a new table: FrequentBrowsers
+
+REQUIREMENTS
+sqlite3 (download link: https://www.sqlite.org/download.html)
+
+RUNNING THIS SOLUTION:
+In a CLI change directory to the location of the .db file.
+sqlite3   					-- Initiate a sqlite3 shell
+.open testdb.db 			-- Open the db file 
+.read CCohen_Solution.sql  	-- Run SQL Solution File
+.quit						-- Close sqlite3 shell
