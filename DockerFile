@@ -1,0 +1,11 @@
+FROM ubuntu:trusty
+
+RUN sudo apt-get -y update
+RUN sudo apt-get -y upgrade
+RUN apt-get install -y sqlite3 libsqlite3-dev
+
+COPY /testdb.db /
+COPY /CCohen_Solution.sql /
+COPY /sqlite_commands.sql /
+
+RUN sqlite3 < /sqlite_commands.sql
