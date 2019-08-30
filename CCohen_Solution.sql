@@ -6,11 +6,15 @@ WHERE id in (
   LIMIT 10)
 ;
 
+DELETE FROM frequent_browsers;
+
 INSERT INTO frequent_browsers
 SELECT personId as person_id, COUNT(personId) as num_sites_visited
 FROM visits
 GROUP BY personId
 ORDER BY COUNT(personId) DESC
 LIMIT 10;
+
+SELECT * FROM  frequent_browsers;
 
 
